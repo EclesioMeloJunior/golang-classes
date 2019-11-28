@@ -79,9 +79,6 @@ func main() {
 	json.Unmarshal(byteValue, &numbers)
 
 	fmt.Print("===== Merge Sort Algorithm\n")
-
-	fmt.Println(numbers)
-
 	ordered := split(numbers)
 
 	fmt.Print("===== Order\n")
