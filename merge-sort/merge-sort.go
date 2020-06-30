@@ -76,11 +76,14 @@ func main() {
 	var numbers []int
 
 	byteValue, _ := ioutil.ReadAll(file)
+	fmt.Println(len(byteValue))
+
 	json.Unmarshal(byteValue, &numbers)
 
+	fmt.Println(fmt.Sprintf("Ordering: %v", len(numbers)))
 	fmt.Print("===== Merge Sort Algorithm\n")
-	ordered := split(numbers)
+	split(numbers)
 
-	fmt.Print("===== Order\n")
-	fmt.Println(ordered)
+	//fmt.Print("===== Order\n")
+	//fmt.Println(ordered)
 }
