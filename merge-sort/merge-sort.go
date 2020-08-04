@@ -65,7 +65,7 @@ func merge(left []int, right []int) []int {
 }
 
 func main() {
-	file, err := os.Open("numbers.json")
+	file, err := os.Open("../test-data/numbers.json")
 
 	if err != nil {
 		fmt.Println(err)
