@@ -34,23 +34,24 @@ func main() {
 		arr[i] = column
 	}
 
-	max := 0
+	var max int
+	var lineindex int
 
-	for lineindex := 0; lineindex < 4; lineindex++ {
-
+	for lineindex = 0; lineindex < 4; lineindex++ {
 		head := arr[lineindex]
 		middle := arr[lineindex+1]
 		bottom := arr[lineindex+2]
 
 		for colindex := 0; colindex < 4; colindex++ {
-
 			headValue := head[colindex] + head[colindex+1] + head[colindex+2]
 			midValue := middle[colindex+1]
 			bottom := bottom[colindex] + bottom[colindex+1] + bottom[colindex+2]
 
 			sum := headValue + midValue + bottom
 
-			if sum > max {
+			if lineindex == 0 && colindex == 0 {
+				max = sum
+			} else if sum > max {
 				max = sum
 			}
 		}
